@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="White"
+             x:Class="UIwork.ProfilePage">
+      <ContentPage.Resources>
+        
+        <ResourceDictionary>
+            <!--Frame to acheive boarder style-->
+            <Style TargetType="Frame" x:Key="FrameStyle">
+                <Setter Property="Padding" Value="0"/>
+                <Setter Property="HasShadow" Value="False"/>
+               
+                <Setter Property="BackgroundColor" Value="#fafafa"/>
+                <Setter Property="CornerRadius" Value="15"/>
+            </Style>
+        </ResourceDictionary>
+        </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  Orientation="Vertical" Margin="15,10,15,0">
+
+             <Frame HeightRequest="200" OutlineColor="Silver" Margin="0,0,0,0" Style="{StaticResource FrameStyle}">
+                <StackLayout HorizontalOptions="Fill" VerticalOptions="FillAndExpand" Orientation="Vertical" Margin="10,10,10,10">
+
+                     <Image BackgroundColor="Transparent" Source="profile_avatar" WidthRequest="60" HeightRequest="60" Aspect="AspectFit">
+                       
+                    </Image>
+                         <Grid HorizontalOptions="CenterAndExpand">
+                         <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                       
+                                    </Grid.RowDefinitions>
+                                   <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                             <Label Grid.Row="0" Grid.Column="0" HorizontalOptions="CenterAndExpand" TextColor="Black" Font="14" FontAttributes="Bold" Text="Name:" />
+                            <Label Grid.Row="0" Grid.Column="1" HorizontalOptions="StartAndExpand" Margin="-20,0,0,0" TextColor="Black"  FontSize="14" Text="Bayo Musa" />
+
+                             <Label  Grid.Row="1" Grid.Column="0" HorizontalOptions="CenterAndExpand" TextColor="Black" Font="14" FontAttributes="Bold" Text="Username:" />
+                            <Label  Grid.Row="1" Grid.Column="1" Margin="-20,0,0,0" TextColor="Black"  FontSize="14" Text="PatsVenture" />
+
+                             <Label Grid.Row="2" Grid.Column="0" HorizontalOptions="CenterAndExpand" TextColor="Black" Font="14" FontAttributes="Bold" Text="Mobile:" />
+                            <Label Grid.Row="2" Grid.Column="1" Margin="-20,0,0,0" TextColor="Black"  FontSize="14" Text="080111111" />
+
+                             <Label  Grid.Row="3" Grid.Column="0" HorizontalOptions="CenterAndExpand" TextColor="Black" Font="14" FontAttributes="Bold" Text="Eamil:" />
+                             <Label  Grid.Row="3" Grid.Column="1" Margin="-20,0,0,0" TextColor="Black"  FontSize="14" Text="patsventure@gmail.com" />
+                        </Grid>
+                  </StackLayout>
+                </Frame>
+                                
+                 <Frame HeightRequest="250" OutlineColor="Silver" Margin="0,5,0,0" Style="{StaticResource FrameStyle}">
+                <StackLayout HorizontalOptions="Fill" VerticalOptions="FillAndExpand" Orientation="Vertical" Margin="10,10,10,10">
+
+                          <Grid Margin="10,10,10,10" HorizontalOptions="Fill">
+                         <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+
+                                       
+                                    </Grid.RowDefinitions>
+                                   <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+
+                                    </Grid.ColumnDefinitions>
+                             <Label Grid.Row="0" Grid.Column="0"  HorizontalOptions="StartAndExpand" TextColor="Black" Font="14" FontAttributes="Bold" Text="Account Status:" />
+                            <Label Grid.Row="0" Grid.Column="1" HorizontalOptions="StartAndExpand" Margin="0,0,0,0" TextColor="Green"  FontSize="14" Text="Active" />
+
+                             <Label  Grid.Row="1" Grid.Column="0" HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Center" TextColor="Black" Font="14" FontAttributes="Bold" Text="My Active Orders:" />
+                            <Label  Grid.Row="1" Grid.Column="1" Margin="0,0,0,0" TextColor="Black"  FontSize="14" Text="2" />
+
+                             <Label Grid.Row="2" Grid.Column="0" HorizontalOptions="StartAndExpand" TextColor="Black" Font="14" FontAttributes="Bold" Text="Account Type:" />
+                            <Label Grid.Row="2" Grid.Column="1" Margin="0,0,0,0" TextColor="Black"  FontSize="14" Text="Client User" />
+
+
+                        </Grid>
+                  </StackLayout>
+                </Frame>
+                <Grid Margin="0,10,0,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40" ></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Button                   
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        TextColor="#AD1457"
+                        CornerRadius="20"
+                        BackgroundColor="Transparent"
+                        BorderColor="Silver"
+                        BorderWidth="1"
+                        Font="14"
+                        FontAttributes="Bold"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        Text="New Order"></Button>
+                    <Button                   
+                    Grid.Column="1"
+                    Grid.Row="0"
+                    TextColor="#AD1457"
+                     CornerRadius="20"
+                     BackgroundColor="Transparent"
+                    BorderColor="Silver"
+                     Font="14"
+                    FontAttributes="Bold"
+                    BorderWidth="1"
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    Text="My Orders"></Button>
+                </Grid>
+            </StackLayout>
+
+            
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
