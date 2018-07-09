@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundImage="slides1"
+              xmlns:renderer="clr-namespace:UIwork.Helpers;assembly=UIwork"   
+             x:Class="UIwork.LoginPage">
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout
+            VerticalOptions="FillAndExpand"
+            Orientation="Vertical"
+            Margin="30,0,30,0"
+            HorizontalOptions="FillAndExpand">
+            <Image
+                Margin="0,60,0,0"
+                HeightRequest="90"
+                WidthRequest="90"
+                HorizontalOptions="CenterAndExpand"
+                Source="Logo"></Image>
+            <Label
+                  TextColor="White"
+                FontAttributes="Bold"
+                FontSize="18"
+                 HorizontalOptions="CenterAndExpand"
+                Text="STREET PEDDLER "></Label>
+            <StackLayout HorizontalOptions="FillAndExpand"
+                         Orientation="Vertical"
+                         VerticalOptions="CenterAndExpand">
+                <renderer:CustomEntery
+                 Margin="0,16,0,0"
+                TextColor="White"
+                PlaceholderColor="White"
+                  Placeholder="User Name"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Start"
+                HeightRequest="40"></renderer:CustomEntery>
+                <renderer:CustomEntery
+                 TextColor="White"
+                PlaceholderColor="White"
+                 Margin="0,16,0,0"
+                Placeholder="Password"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Start"
+                HeightRequest="40"></renderer:CustomEntery>
+
+                <Button                   
+                        TextColor="White"
+                        CornerRadius="20"
+                        BackgroundColor="Transparent"
+                         BorderWidth="1"
+                         BorderColor="White"
+                        Font="16"
+                      x:Name="SignIn"
+                        Margin="0,8,0,0"
+                    HeightRequest="40"
+                        FontAttributes="Bold"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        Text="Sign In"></Button>
+                <Grid Margin="0,8,0,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60" ></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Image
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand"
+                    HeightRequest="51"
+                    WidthRequest="39"
+                    Source="facebook">
+                    </Image>
+                    <Image
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand"
+                    HeightRequest="48"
+                    WidthRequest="42"
+                    Source="googleplus">
+                    </Image>
+                    <Image
+                    Grid.Row="0"
+                    Grid.Column="2"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand"
+                    HeightRequest="47"
+                    WidthRequest="42"
+                    Source="twitter">
+                    </Image>
+                </Grid>
+                
+                <Grid Margin="0,8,0,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40" ></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Button                   
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        TextColor="White"
+                        CornerRadius="20"
+                        BackgroundColor="Transparent"
+                        BorderColor="White"
+                        BorderWidth="1"
+                        Font="14"
+                        x:Name="VendorSignUp"
+                        FontAttributes="Bold"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        Text="Vendor Sign Up"></Button>
+                    <Button                   
+                    Grid.Column="1"
+                    Grid.Row="0"
+                    TextColor="White"
+                     CornerRadius="20"
+                     BackgroundColor="Transparent"
+                    BorderColor="White"
+                     Font="14"
+                         x:Name="ClientSignUp"
+                    FontAttributes="Bold"
+                    BorderWidth="1"
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    Text="Client Sign Up"></Button>
+                </Grid>
+            </StackLayout>
+            <StackLayout
+                VerticalOptions="EndAndExpand"
+                Margin="0,0,0,16"
+                Orientation="Horizontal">
+                <StackLayout
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand"
+                    Orientation="Horizontal">
+                    <Label
+                       HorizontalOptions="Start"
+                       VerticalOptions="CenterAndExpand"
+                       Text="© 2018 Street Peddler Limited"
+                       FontSize="18"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"></Label>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
+
+
